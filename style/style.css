@@ -1,0 +1,103 @@
+:root {
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --primario: sandybrown;
+    --secundario: #0097A7;
+    --gris: #757575;
+    --grisClaro: #DFE9F3;
+}
+/*  Globales **/
+html {
+    font-size: 62.5%;
+    box-sizing: border-box; /* Hack para Box Model **/
+   
+}
+
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {   
+    font-size: 16px; /* 1rem = 10px */  
+}
+
+h1 {
+    max-width: 1200px;
+    margin:0 auto;
+    padding: 7rem;
+    
+}
+h1, form  {
+    text-align: center;
+}
+
+ .campo {
+     background-color: var(--primario);
+     margin-bottom: 2rem;
+ }
+ 
+ .botonformulario {
+    background-color: bisque;
+    font-size: 2rem;
+ 
+ }
+
+ th, td {
+     border: solid var(--primario) 1px;
+     padding: 1rem;
+ }    
+
+
+
+
+
+.botonformulario:hover {
+    color: #0097A7;
+    background-color: #212121;
+}
+
+main {
+    width: auto;
+}
+
+.Pie {
+    padding: 5rem;
+    text-align: center;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    main {
+        max-width: 1200px;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        width: auto;  
+    }
+    .formulario {
+        width: 500px;
+         margin:0 auto;
+         
+     }
+}
+
+main {
+    width: auto;
+    
+    justify-content: space-between;
+    margin: 0 auto;
+    width: auto;  
+}
+.formulario {
+    width: auto;
+     margin:0 auto;
+     
+ }
+}
+.tabla {
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+    margin:0 auto;
+    
+    }

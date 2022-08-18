@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Aplicacion de gastos</title>
+</head>
+<body>
+    <div class="contenedor">
+
+    <div class="ftitulo">
+        <h1>Aplicacion de gastos personales</h1>
+
+    </div>
+        <main>
+    <div class="formulario">
+        <form id="formularioTotal" action="">
+         
+            <div class="contenedor__formulario">
+              <div class="campo">
+                Tipo de gasto
+               
+                <input id="label1a" type="radio" name="opcion" value="Ingreso">
+                <label for="label1a">Ingreso</label>           
+                <input id="label1b" type="radio" name="opcion" value="Egreso">
+                <label for="label1b">Egreso</label>
+              </div>
+              <div class="campo">
+                <label for="label2" >Descripción</label>
+                <input id="label2" name="label2" type="text">
+              </div>
+              <div class="campo">
+                <label for="label3">Monto</label>
+                <input id="label3" name="label3" type="number">
+              </div>
+              <div class="campo">
+                <label for="label4">Categoria</label>
+                <select name="label4" id="label4">
+            </select>
+              </div>
+              <div class="campo">  
+                <button class=" botonformulario">Añadir</button>
+            </div>
+            </div>
+       
+        </form>
+    </div>
+    <div class="contenedortabla">
+        <table id="tablaid" class="contenedortabla tabla">
+            <tr>
+                <th>
+                    Tipo
+                </th>
+                <th>
+                    Descripción
+                </th>
+                <th>
+                    Monto
+                </th>
+                <th>
+                    Categoria
+                </th>
+                <th>
+                    Eliminar
+                </th>
+            </tr>
+        </table>
+    </div>
+</main>
+</div>
+<footer class="Pie"> </footer>
+    <script src="scripts/js.js"></script>
+</body>
+</html>
