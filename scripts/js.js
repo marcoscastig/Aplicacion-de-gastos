@@ -49,7 +49,7 @@ function getNewFormularioID () {
   return newFormularioID;
 }
 
-function convertirformularioTotalDataInObj (formularioTotalData) { //Permite convertir en un objeto los datos del formulario, 
+function convertirformularioTotalDataInObj (formularioTotalData) { //Permite convertir en un objeto los valores del formulario, 
   let opcion =  formularioTotalData.get("opcion");                 //De esta forma es posible que se puedan transofrmar a JSON luego
   let label2 =  formularioTotalData.get("label2");
   let label3 =  formularioTotalData.get("label3");
