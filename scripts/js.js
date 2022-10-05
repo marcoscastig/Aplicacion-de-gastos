@@ -91,24 +91,23 @@ function insertRowEntablaid(formularioObj) {
 
     Deletebutton.addEventListener("click", (event) => { //Accedo a la fila del boton eliminar y la elimio al tocar boton
       let FormularioRow = event.target.parentNode.parentNode;
-      let FormularioID = FormularioRow.getAttribute("data-formulario-id");
+      let FormularioID = FormularioRow.getAttribute("Data-Formulario-ID");
+      console.log(FormularioID)
       FormularioRow.remove()  
       deleteFormularioID(FormularioID)
     })
 }
 
 function deleteFormularioID(FormularioID) {
-// Se accede al local sotrage y se crea un array
-  let myformularioObjarray = JSON.parse(localStorage.getItem("formularioTotalData"));
-// En el Array creado se busca con una iteracion ((findIndex)) la Id de la fila del formulario.
-  let formularioIndexInarray = myformularioObjarray.findIndex(element => element.FormularioID === FormularioID);
-  //Se elimina en el array creado la fila, el 1 indica que se elminara solo 1 elemento
-  myformularioObjarray.splice(formularioIndexInarray, 1)
-  //Se declara la variable que se guardara en el local sotrage
-  let FormularioArrayJSON = JSON.stringify(myformularioObjarray);   
-  //se almacena en el local storag el array en formato json la nueva base de datos con la fila que se ha elminado          
-  localStorage.setItem("formularioTotalData", FormularioArrayJSON);
-}
+  // Se accede al local sotrage y se crea un array
+    let myformularioObjarray = JSON.parse(localStorage.getItem("formularioTotalData"));
+  // En el Array creado se busca con un metodo filter todos los elementos que no sean el elejido con el boton.
+    let formularioIndexInarray = myformularioObjarray.filter(element => element.FormularioID != FormularioID);
+    //Se declara la variable que se guardara en el local sotrage
+    let FormularioArrayJSON = JSON.stringify(formularioIndexInarray);   
+    //se almacena en el local storage el array en formato json la nueva base de datos con la fila que se ha elminado          
+    localStorage.setItem("formularioTotalData", FormularioArrayJSON);
+  }
 
 // Esta funcion trabaja sobre el objeto que surje de los datos del formulario,// ademas la transofrma en un json para que pueda luego se utilizada por el local server 
 function saveformularioObj (formularioObj) {                            
