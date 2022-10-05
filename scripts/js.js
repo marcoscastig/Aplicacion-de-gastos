@@ -92,7 +92,6 @@ function insertRowEntablaid(formularioObj) {
     Deletebutton.addEventListener("click", (event) => { //Accedo a la fila del boton eliminar y la elimio al tocar boton
       let FormularioRow = event.target.parentNode.parentNode;
       let FormularioID = FormularioRow.getAttribute("Data-Formulario-ID");
-      console.log(FormularioID)
       FormularioRow.remove()  
       deleteFormularioID(FormularioID)
     })
